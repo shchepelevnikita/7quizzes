@@ -1,0 +1,26 @@
+server:
+  address: 127.0.0.1
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: 'org.postgresql.Driver'
+    url: 'jdbc:postgresql://localhost:5432/seven_quizzes'
+    username: 'seven_quizzes'
+    password: 'seven_password'
+  profiles:
+    active: console-and-file-logging
+
+jwt:
+  issuer: 'switchblxde@gmail.com'
+  signingKey: 'lrwrGPiMJqE62pxKyBB4iZtYRjwBWiEWBmpykhuql6quBZxrEBadhIsxN1Tkcn7'
+  aTokenDuration: 30
+
+logging:
+  logback:
+    rollingpolicy:
+      max-file-size: 512KB
+  file:
+    path: logs
+    name:
+      pattern:
